@@ -1,0 +1,81 @@
+<!--
+
+    Instituto Federal de Educação, Ciência e Tecnologia - IFPE
+    Curso: Informática para Internet
+    Disciplina: Lógica de Programação e Estrutura de Dados
+    Professor: Allan Lima - allan.lima@igarassu.ifpe.edu.br
+    Código de Domínio Público, sinta-se livre para usá-lo, modificá-lo e redistribuí-lo.
+
+-->
+
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/nivel.css">
+        <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+    </head>
+    
+    <body>
+         <table>
+                <tbody>
+                    {{#nivel}}
+                    <tbody>
+                        {{#cabecalho}}
+                            <tr>
+                                {{#each linha}}
+                                    <td class="cabecalho">
+                                        {{#if this}}
+                                           {{this}}
+                                        {{/if}}
+                                    </td>
+                                {{/each}}
+                            </tr>
+                        {{/cabecalho}}
+
+                        {{#tabela}}
+                            <tr>
+                                {{#linha}}
+                                    {{#prefixo}}
+                                        <td class="cabecalho">
+                                            {{.}}
+                                        </td>
+                                    {{/prefixo}}
+                                    {{#each dados}}
+
+                                        {{#if this}}
+                                            <td>
+                                        {{else}}
+                                            <td class="tabela">
+                                        {{/if}}
+                                            <a href="tratar?linha={{@../../index}}&coluna={{@index}}">
+                                                <div class="celula">
+                                                </div>
+                                            </a>
+                                                
+                                            </a>
+                                        </td>
+                                    {{/each}}
+                                {{/linha}}
+                            </tr>
+                        {{/tabela}}
+
+                        <!-- <tr>
+                            {{#tabela.linha}}
+                                <td>{{prefixo.[1]}}</td>
+                            {{/tabela.linha}}
+                        </tr>
+
+
+                        <!-- <tr>
+                            {{#linha}}
+                                <td> <a href="tratar?linha={{@../index}}&coluna={{@index}}">{{.}}</a></td>
+                            {{/linha}}
+                        </tr> -->
+                    </tbody> 
+                    {{/nivel}}
+                </tbody>
+            </table>
+    </body>
+</html>
