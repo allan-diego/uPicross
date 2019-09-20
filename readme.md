@@ -19,8 +19,8 @@ nodemon jogo.js
 ## Author
 
 
-* **Instituto Federal de Educação, Ciência e Tecnologia - IFPE** - (http://ifpe.edu.br)
-* **Allan Diego Silva Lima** - [PurpleBooth](https://github.com/allan-diego)
+* **Instituto Federal de Educação, Ciência e Tecnologia - IFPE** - http://ifpe.edu.br
+* **Allan Diego Silva Lima** - [allan-diego](https://github.com/allan-diego)
 
 ## Licença
 
